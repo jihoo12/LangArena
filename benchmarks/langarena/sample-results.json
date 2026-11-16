@@ -1,0 +1,1709 @@
+{
+  "date": "2026-11-16T12:51:52+0900",
+  "host": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.44",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700",
+  "affinity_cpu": 0,
+  "initial_load": [
+    0.26318359375,
+    0.38037109375,
+    0.50439453125
+  ],
+  "jihoo_revision": "779bffbaedefb5ea5430396966665383fb0d53b3",
+  "langarena_revision": "d63ef3109ee566743a71e1e8aef082ba7589ff65",
+  "coverage": {
+    "implemented": 12,
+    "upstream_total": 50,
+    "unported": [
+      "Brainfuck::Array",
+      "Brainfuck::Recursion",
+      "Matmul::T4",
+      "Matmul::T8",
+      "Matmul::T16",
+      "Base64::Encode",
+      "Base64::Decode",
+      "Json::Generate",
+      "Json::ParseDom",
+      "Json::ParseMapping",
+      "CSV::Parse",
+      "Etc::TextRaytracer",
+      "Etc::NeuralNet",
+      "Etc::CacheSimulation",
+      "Etc::GameOfLife",
+      "Etc::Words",
+      "Etc::LogParser",
+      "Template::Regex",
+      "Template::Parse",
+      "Graph::BFS",
+      "Graph::DFS",
+      "Graph::AStar",
+      "Calculator::Ast",
+      "Calculator::Interpreter",
+      "Maze::Generator",
+      "Maze::BFS",
+      "Maze::AStar",
+      "CLBG::Nbody",
+      "Compress::BWTEncode",
+      "Compress::BWTDecode",
+      "Compress::HuffEncode",
+      "Compress::HuffDecode",
+      "Compress::ArithEncode",
+      "Compress::ArithDecode",
+      "Compress::LZWEncode",
+      "Compress::LZWDecode",
+      "Distance::Jaro",
+      "Distance::NGram"
+    ]
+  },
+  "method": "Per-workload inner time; upstream warmup and checksum state; median of rotated fresh processes; one CPU; no Docker.",
+  "flags": {
+    "Jihoo": [
+      "-O2",
+      "--release"
+    ],
+    "C/Clang": [
+      "-O2",
+      "-DNDEBUG",
+      "-fstack-protector-strong",
+      "-fno-omit-frame-pointer"
+    ],
+    "Rust": [
+      "cargo",
+      "build",
+      "--release",
+      "--locked",
+      "--jobs",
+      "1"
+    ]
+  },
+  "build_commands": {
+    "Jihoo": [
+      "/home/user/jihoo/out/jihoo-langa",
+      "build",
+      "-O2",
+      "--release",
+      "/home/user/jihoo/benchmarks/langarena/main.jh",
+      "-o",
+      "/home/user/jihoo/out/langarena/jihoo"
+    ],
+    "C/Clang": [
+      "clang",
+      "-O2",
+      "-DNDEBUG",
+      "-fstack-protector-strong",
+      "-fno-omit-frame-pointer",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror=return-type",
+      "-Werror=address",
+      "-I",
+      "/home/user/LangArena/c/src",
+      "/home/user/jihoo/benchmarks/langarena/c-main.c",
+      "/home/user/LangArena/c/src/helper.c",
+      "/home/user/LangArena/c/src/benchmark.c",
+      "/home/user/LangArena/c/src/binarytrees.c",
+      "/home/user/LangArena/c/src/matmul1t.c",
+      "/home/user/LangArena/c/src/sieve.c",
+      "/home/user/LangArena/c/src/sort.c",
+      "/home/user/LangArena/c/src/buffer_hash.c",
+      "/home/user/LangArena/c/src/fannkuchredux.c",
+      "/home/user/LangArena/c/src/mandelbrot.c",
+      "/home/user/LangArena/c/src/spectralnorm.c",
+      "-lyyjson",
+      "-lm",
+      "-pthread",
+      "-Wl,-z,relro,-z,now",
+      "-Wl,--gc-sections",
+      "-o",
+      "/home/user/jihoo/out/langarena/c-clang"
+    ],
+    "Rust": [
+      "cargo",
+      "build",
+      "--release",
+      "--locked",
+      "--jobs",
+      "1",
+      "--manifest-path",
+      "/home/user/LangArena/rust/Cargo.toml",
+      "--target-dir",
+      "/home/user/jihoo/out/langarena/rust"
+    ]
+  },
+  "compile_seconds": {},
+  "versions": {
+    "Jihoo": "jihoo 0.6.0",
+    "C/Clang": "clang version 21.1.8\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /nix/store/jmgw1yz3xm3bpgrk9r84jkcynskdbd40-clang-21.1.8/bin",
+    "Rust": "rustc 1.98.1 (48a229cea 2026-09-01) (built from a source tarball)",
+    "Javascript/Node": "v24.21.0",
+    "Python/PyPy": "Python 3.11.13 (413c9b7f57f5, Sep 23 2026, 15:13:27)\n[PyPy 7.3.20 with GCC 16.2.0]"
+  },
+  "source_sha256": {
+    "/home/user/jihoo/benchmarks/langarena/main.jh": "9ce08ccc0bdb2dcdc06356701a5fde3decab29d715c03118534c4c83be0d5a1f",
+    "/home/user/jihoo/benchmarks/langarena/c-main.c": "fc14f3d753b8a3ac1fa2b14352d6a82e3046c92793c8ce81a0c32cc0dc4a0906",
+    "/home/user/jihoo/benchmarks/langarena/run.py": "1f71644b2b15a1f1d79296923110d3fc70a5d2addd99505a34106c050a76f1d6",
+    "/home/user/jihoo/flake.lock": "5f213ab5bbf96e6acca0a5b88c4a47c83e21dc176b3cf450e4bcd00c692202db",
+    "/home/user/LangArena/test.js": "e85b22fb9b659f6761fc8884c34a31b55f59cd7a1894562a6b85ebb5236391b9",
+    "/home/user/LangArena/run.js": "53f7460563b730645a3d9ca488d62cb89dff639fa1c65071ba87e8bee77626e9",
+    "/home/user/LangArena/python/main.py": "c2596a395cae771efea05aac8d58a8b057ee470cadc845f0f73acd817f34268b",
+    "/home/user/LangArena/javascript/index.js": "6f0f74461f9aa75642c15214ddf3f0a7ec3f7ea3068c8bf485c06821b5eb2e98",
+    "/home/user/LangArena/c/src/helper.c": "0497db929db7bd2de887ed171364dea103aecbd7557fb424d9bffb21e193de5f",
+    "/home/user/LangArena/c/src/benchmark.c": "cecfe004be3287c7614c55bc7394bc6908e7052a9153cc420bb7e8b63a55f6d4",
+    "/home/user/LangArena/c/src/binarytrees.c": "e6cd74cd25c33ea261d5bfec6f072b8d958809d0b1ffd1e6333a4cf3a8cb2b39",
+    "/home/user/LangArena/c/src/matmul1t.c": "6e5e10428c700b34c78110bce2823cea3dbc5f00cf1a03ed04a42c64d98b354f",
+    "/home/user/LangArena/c/src/sieve.c": "15d323fb13066a981c64e4301a709a96d0874737cbf4b43fcf9a57c2e13946ab",
+    "/home/user/LangArena/c/src/sort.c": "2499b350eda46e98ecaaa6e3ad8a0f016d3398c99af5e84161f081da218ef1a6",
+    "/home/user/LangArena/c/src/buffer_hash.c": "045ef19faf718d68b98cb2653d7fb40371c1cf068093df2caebd3fa81dc866e2",
+    "/home/user/LangArena/c/src/fannkuchredux.c": "70929b65ac63925121f5e1def09b008c9a0cc9df5fb90b73544526ccfa0b6afd",
+    "/home/user/LangArena/c/src/mandelbrot.c": "95452b3d5c2d648bae7b406897ebacac66fc83ca3c4111fcc64ff6cf858676fd",
+    "/home/user/LangArena/c/src/spectralnorm.c": "7a6e31676f8bd02f8857200ed153ed9093744003e93e6fe84455d9d7f958e620",
+    "/home/user/LangArena/rust/src/benchmarks/base64_decode.rs": "192fedd4a896fda41c219aa8c7141b9e27261e610b4e08abd56b287fbd393ac8",
+    "/home/user/LangArena/rust/src/benchmarks/base64_encode.rs": "42845b5c944967ab158ae143ffa9950e1f0ecd7145d47d5c6ecafe92ac0e332d",
+    "/home/user/LangArena/rust/src/benchmarks/binarytrees.rs": "c39dba0d2202b6218de4ba7992cd0d4ebeb858400eb5c05cf7559d3e3c5021ec",
+    "/home/user/LangArena/rust/src/benchmarks/brainfuck_array.rs": "557513b23d36570d5e75fb3a238c994c196708245afc63556edfa6c52a661f56",
+    "/home/user/LangArena/rust/src/benchmarks/brainfuck_recursion.rs": "4558418f83453acdfd9d43daf96e793890d2a5bd65bbe822989ccd1c735e6f2b",
+    "/home/user/LangArena/rust/src/benchmarks/buffer_hash_benchmark.rs": "c73de5a4fba9d1c66fb7b82f57a72e227ac48dc153d10bafcc5bef87f8b434d7",
+    "/home/user/LangArena/rust/src/benchmarks/buffer_hash_crc32.rs": "9bb21775af0857d420e8861cac5efb13658448af13c4b0eeb2215b6e7a1ece39",
+    "/home/user/LangArena/rust/src/benchmarks/buffer_hash_sha256.rs": "302902e0219d8444bd7712a1cc6f7324c32abd7cfe95b6598b5a3ba42c4f087f",
+    "/home/user/LangArena/rust/src/benchmarks/cache_simulation.rs": "915643de9f1844dfcfafc52dab106b3e160fd89419659e0a6f0f20c03680bb78",
+    "/home/user/LangArena/rust/src/benchmarks/calculator_ast.rs": "778df388dafd5daa969022cb53f2e4e062c698dd5152d1b9f5a80ff5118b42fd",
+    "/home/user/LangArena/rust/src/benchmarks/calculator_interpreter.rs": "848aa45e5d9072897fc2e3b3c557ef32389fda0425fb8316ff5390b9134c431b",
+    "/home/user/LangArena/rust/src/benchmarks/compress.rs": "d30733cc1104432093193002f0149b2450fd8f87a375e66b5efeb3f63ea858d7",
+    "/home/user/LangArena/rust/src/benchmarks/csv_parse.rs": "fef2e4bb78fe7aef86a49d16a2daf3f491a99ebd85d1e125d5615c03c49b2524",
+    "/home/user/LangArena/rust/src/benchmarks/distance.rs": "db87c5205ff453c8865061e531170d5c57a0e8b62c9775b5c5d27e07d85ac758",
+    "/home/user/LangArena/rust/src/benchmarks/fannkuchredux.rs": "f6350fd9b83424835ed5171651c26f7fda7009065549beadca60848488c955cb",
+    "/home/user/LangArena/rust/src/benchmarks/game_of_life.rs": "3e493e2ba445d76d34f563b1b2dcef31bd342cb7c52b909db9be2fe9ec8c9628",
+    "/home/user/LangArena/rust/src/benchmarks/graph_path.rs": "fbf24fbda41d09a1848095c717d6e1e00c86ac52d67157b3b21d97d6b9a6f0ce",
+    "/home/user/LangArena/rust/src/benchmarks/json_generate.rs": "6105ff24ae76251f2e7c15dacfbf9b15dcecc1eddf59de666d0a03f62ac33dd0",
+    "/home/user/LangArena/rust/src/benchmarks/json_parse_dom.rs": "a86b167c7d657758e6c5ecdf4d2b1baf0c171424f5f742543f5bd5999b9ac81b",
+    "/home/user/LangArena/rust/src/benchmarks/json_parse_mapping.rs": "5c00080e0e31e9b605843b1afcf44a36e5fe2eb3b16ce5756bc0c0d38e1828f5",
+    "/home/user/LangArena/rust/src/benchmarks/log_parser.rs": "30719acb0d21a7abc188d7fe32ffb207d4269dc86e85db68e7d9e213e9361c58",
+    "/home/user/LangArena/rust/src/benchmarks/mandelbrot.rs": "7055b5429685892b86d990f028009c0fac83405a662defc3254598beb1c1e927",
+    "/home/user/LangArena/rust/src/benchmarks/matmul.rs": "07369fda01d4030f52780c9137b343c96620744978052de594ae8178225bd92a",
+    "/home/user/LangArena/rust/src/benchmarks/maze.rs": "ba3273bcb24564624ffe75b03a4872e9416145ac49860bdfe781f1e8df7cb4c4",
+    "/home/user/LangArena/rust/src/benchmarks/mod.rs": "ea721c22e283857783edd3b547a14a322b1b5c817202c0b1d7d634b533a23aa1",
+    "/home/user/LangArena/rust/src/benchmarks/nbody.rs": "534106f21c915144d1b7b4b7eec9aebf970d12a0ab0e8e1a0c666ed04688a5bf",
+    "/home/user/LangArena/rust/src/benchmarks/neural_net.rs": "1d61f96f0b0b9f87d59123d01e47db973fd1a4c5504f9fa32d97dab608ce0e56",
+    "/home/user/LangArena/rust/src/benchmarks/sieve.rs": "04f12246ff8761a2418eca8a539aa62b579b1956f30b82204e0319a04debd4ca",
+    "/home/user/LangArena/rust/src/benchmarks/sort_benchmark.rs": "1c592b58618312717e8135cc34a1fb5643c7929f7f32745fcc1cb45e6f40e314",
+    "/home/user/LangArena/rust/src/benchmarks/sort_merge.rs": "38bde327d20809220fd639435389fbd513f5f54069a90799919cf0c2c7ed7f90",
+    "/home/user/LangArena/rust/src/benchmarks/sort_quick.rs": "38b13c405663b54fad2944440de96c6923ac6449f3a168d2bdedb700db57dfbb",
+    "/home/user/LangArena/rust/src/benchmarks/sort_self.rs": "656af003f52353d47af3002da56ccb26f977da91f6c9db31cedf6cc8cf1fbb9a",
+    "/home/user/LangArena/rust/src/benchmarks/spectralnorm.rs": "86625e82110a7caa43ba20b714dfa0d68c3db09a38b5c0f36e90b77e354a0002",
+    "/home/user/LangArena/rust/src/benchmarks/template.rs": "b1bea4b5a35715d56636611a0952c0a8902d3d27a93d2b39a8b366931c52236b",
+    "/home/user/LangArena/rust/src/benchmarks/text_raytracer.rs": "1e175509566e83bd3a4fc0d556da5a263292c2ded26761a598d137977e8db6d3",
+    "/home/user/LangArena/rust/src/benchmarks/words.rs": "aaff347798711e883cba764892181dc3eed554606f552b1df0085c18d99802dc",
+    "/home/user/LangArena/rust/src/helper.rs": "d264c471a03abd5cc4e1fcc96bd8ac31a2a1ff223c6d9d26e45f1f7d698eb7c9",
+    "/home/user/LangArena/rust/src/main.rs": "4ba1b3b56cf4ec6cb707f2ee7ed3b8416782b1259e944c533c808b8948a2bfcc"
+  },
+  "small_checks": {
+    "Binarytrees::Obj": {
+      "Jihoo": {
+        "seconds": 2.361e-06,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 124
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 124
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 124
+      },
+      "Javascript/Node": {
+        "seconds": 0.0,
+        "peak_rss_mib": 54.30078125,
+        "expected_checksum": 124
+      },
+      "Python/PyPy": {
+        "seconds": 0.001,
+        "peak_rss_mib": 143.2265625,
+        "expected_checksum": 124
+      }
+    },
+    "Binarytrees::Arena": {
+      "Jihoo": {
+        "seconds": 6.61e-07,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 124
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 124
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 124
+      },
+      "Javascript/Node": {
+        "seconds": 0.0,
+        "peak_rss_mib": 54.30078125,
+        "expected_checksum": 124
+      },
+      "Python/PyPy": {
+        "seconds": 0.001,
+        "peak_rss_mib": 143.2265625,
+        "expected_checksum": 124
+      }
+    },
+    "Matmul::Single": {
+      "Jihoo": {
+        "seconds": 0.00014559,
+        "peak_rss_mib": 2.1484375,
+        "expected_checksum": 720656960
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.59375,
+        "expected_checksum": 720656960
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 720656960
+      },
+      "Javascript/Node": {
+        "seconds": 0.001,
+        "peak_rss_mib": 63.0546875,
+        "expected_checksum": 720656960
+      },
+      "Python/PyPy": {
+        "seconds": 0.002,
+        "peak_rss_mib": 143.7734375,
+        "expected_checksum": 720656960
+      }
+    },
+    "Etc::Sieve": {
+      "Jihoo": {
+        "seconds": 2.338e-06,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 4660
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 4660
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 4660
+      },
+      "Javascript/Node": {
+        "seconds": 0.001,
+        "peak_rss_mib": 55.01953125,
+        "expected_checksum": 4660
+      },
+      "Python/PyPy": {
+        "seconds": 0.002,
+        "peak_rss_mib": 143.3984375,
+        "expected_checksum": 4660
+      }
+    },
+    "Sort::Quick": {
+      "Jihoo": {
+        "seconds": 0.011144706,
+        "peak_rss_mib": 2.5390625,
+        "expected_checksum": 2548773
+      },
+      "C/Clang": {
+        "seconds": 0.01,
+        "peak_rss_mib": 3.08203125,
+        "expected_checksum": 2548773
+      },
+      "Rust": {
+        "seconds": 0.011,
+        "peak_rss_mib": 4.515625,
+        "expected_checksum": 2548773
+      },
+      "Javascript/Node": {
+        "seconds": 0.017,
+        "peak_rss_mib": 69.00390625,
+        "expected_checksum": 2548773
+      },
+      "Python/PyPy": {
+        "seconds": 0.032,
+        "peak_rss_mib": 150.11328125,
+        "expected_checksum": 2548773
+      }
+    },
+    "Sort::Merge": {
+      "Jihoo": {
+        "seconds": 0.015570112,
+        "peak_rss_mib": 2.86328125,
+        "expected_checksum": 2548773
+      },
+      "C/Clang": {
+        "seconds": 0.009,
+        "peak_rss_mib": 3.51953125,
+        "expected_checksum": 2548773
+      },
+      "Rust": {
+        "seconds": 0.012,
+        "peak_rss_mib": 4.953125,
+        "expected_checksum": 2548773
+      },
+      "Javascript/Node": {
+        "seconds": 0.024,
+        "peak_rss_mib": 70.796875,
+        "expected_checksum": 2548773
+      },
+      "Python/PyPy": {
+        "seconds": 0.044,
+        "peak_rss_mib": 150.89453125,
+        "expected_checksum": 2548773
+      }
+    },
+    "Sort::Self": {
+      "Jihoo": {
+        "seconds": 0.00725285,
+        "peak_rss_mib": 2.86328125,
+        "expected_checksum": 2548773
+      },
+      "C/Clang": {
+        "seconds": 0.016,
+        "peak_rss_mib": 3.51953125,
+        "expected_checksum": 2548773
+      },
+      "Rust": {
+        "seconds": 0.003,
+        "peak_rss_mib": 4.953125,
+        "expected_checksum": 2548773
+      },
+      "Javascript/Node": {
+        "seconds": 0.033,
+        "peak_rss_mib": 68.921875,
+        "expected_checksum": 2548773
+      },
+      "Python/PyPy": {
+        "seconds": 0.017,
+        "peak_rss_mib": 150.61328125,
+        "expected_checksum": 2548773
+      }
+    },
+    "Hash::SHA256": {
+      "Jihoo": {
+        "seconds": 5.79e-06,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 1395154197
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 1395154197
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 1395154197
+      },
+      "Javascript/Node": {
+        "seconds": 0.001,
+        "peak_rss_mib": 55.83203125,
+        "expected_checksum": 1395154197
+      },
+      "Python/PyPy": {
+        "seconds": 0.002,
+        "peak_rss_mib": 143.2265625,
+        "expected_checksum": 1395154197
+      }
+    },
+    "Hash::CRC32": {
+      "Jihoo": {
+        "seconds": 2.0182e-05,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 1626481306
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 1626481306
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 1626481306
+      },
+      "Javascript/Node": {
+        "seconds": 0.001,
+        "peak_rss_mib": 60.93359375,
+        "expected_checksum": 1626481306
+      },
+      "Python/PyPy": {
+        "seconds": 0.001,
+        "peak_rss_mib": 143.40234375,
+        "expected_checksum": 1626481306
+      }
+    },
+    "CLBG::Fannkuchredux": {
+      "Jihoo": {
+        "seconds": 3.848e-06,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 4428
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 4428
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 4428
+      },
+      "Javascript/Node": {
+        "seconds": 0.001,
+        "peak_rss_mib": 55.14453125,
+        "expected_checksum": 4428
+      },
+      "Python/PyPy": {
+        "seconds": 0.004,
+        "peak_rss_mib": 143.2265625,
+        "expected_checksum": 4428
+      }
+    },
+    "CLBG::Mandelbrot": {
+      "Jihoo": {
+        "seconds": 0.000130736,
+        "peak_rss_mib": 1.8046875,
+        "expected_checksum": 2236342953
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 2236342953
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 2236342953
+      },
+      "Javascript/Node": {
+        "seconds": 0.0,
+        "peak_rss_mib": 62.4765625,
+        "expected_checksum": 2236342953
+      },
+      "Python/PyPy": {
+        "seconds": 0.002,
+        "peak_rss_mib": 143.54296875,
+        "expected_checksum": 2236342953
+      }
+    },
+    "CLBG::Spectralnorm": {
+      "Jihoo": {
+        "seconds": 8.5365e-05,
+        "peak_rss_mib": 2.0,
+        "expected_checksum": 1052168784
+      },
+      "C/Clang": {
+        "seconds": 0.0,
+        "peak_rss_mib": 2.4375,
+        "expected_checksum": 1052168784
+      },
+      "Rust": {
+        "seconds": 0.0,
+        "peak_rss_mib": 3.89453125,
+        "expected_checksum": 1052168784
+      },
+      "Javascript/Node": {
+        "seconds": 0.002,
+        "peak_rss_mib": 62.9296875,
+        "expected_checksum": 1052168784
+      },
+      "Python/PyPy": {
+        "seconds": 0.003,
+        "peak_rss_mib": 143.59765625,
+        "expected_checksum": 1052168784
+      }
+    }
+  },
+  "samples": {
+    "Binarytrees::Obj": {
+      "Jihoo": [
+        {
+          "seconds": 1.382014604,
+          "peak_rss_mib": 97.8984375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.424217919,
+          "peak_rss_mib": 97.8984375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.388422922,
+          "peak_rss_mib": 97.8984375,
+          "expected_checksum": 75497436
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 1.883,
+          "peak_rss_mib": 66.265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.86,
+          "peak_rss_mib": 66.265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.865,
+          "peak_rss_mib": 66.265625,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 1.944,
+          "peak_rss_mib": 67.78515625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.917,
+          "peak_rss_mib": 67.78515625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 1.915,
+          "peak_rss_mib": 67.78515625,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 3.94,
+          "peak_rss_mib": 665.68359375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 3.941,
+          "peak_rss_mib": 654.29296875,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 3.935,
+          "peak_rss_mib": 660.54296875,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 6.36,
+          "peak_rss_mib": 352.22265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 6.41,
+          "peak_rss_mib": 352.22265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 6.491,
+          "peak_rss_mib": 352.22265625,
+          "expected_checksum": 75497436
+        }
+      ]
+    },
+    "Binarytrees::Arena": {
+      "Jihoo": [
+        {
+          "seconds": 0.363740664,
+          "peak_rss_mib": 25.93359375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.345603255,
+          "peak_rss_mib": 25.93359375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.364080299,
+          "peak_rss_mib": 25.93359375,
+          "expected_checksum": 75497436
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.337,
+          "peak_rss_mib": 26.57421875,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.338,
+          "peak_rss_mib": 26.57421875,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.345,
+          "peak_rss_mib": 26.57421875,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.33,
+          "peak_rss_mib": 27.9921875,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.33,
+          "peak_rss_mib": 27.9921875,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 0.332,
+          "peak_rss_mib": 27.9921875,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 5.157,
+          "peak_rss_mib": 912.87890625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 4.732,
+          "peak_rss_mib": 936.9375,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 5.337,
+          "peak_rss_mib": 837.81640625,
+          "expected_checksum": 75497436
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 9.192,
+          "peak_rss_mib": 528.72265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 8.905,
+          "peak_rss_mib": 528.72265625,
+          "expected_checksum": 75497436
+        },
+        {
+          "seconds": 9.109,
+          "peak_rss_mib": 528.72265625,
+          "expected_checksum": 75497436
+        }
+      ]
+    },
+    "Matmul::Single": {
+      "Jihoo": [
+        {
+          "seconds": 4.258204987,
+          "peak_rss_mib": 26.9921875,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 4.283769819,
+          "peak_rss_mib": 26.9921875,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 4.368797901,
+          "peak_rss_mib": 26.9921875,
+          "expected_checksum": 3655420808
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 3.031,
+          "peak_rss_mib": 27.1015625,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.034,
+          "peak_rss_mib": 27.1015625,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.028,
+          "peak_rss_mib": 27.1015625,
+          "expected_checksum": 3655420808
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 3.269,
+          "peak_rss_mib": 28.56640625,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.309,
+          "peak_rss_mib": 28.56640625,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.329,
+          "peak_rss_mib": 28.56640625,
+          "expected_checksum": 3655420808
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 3.989,
+          "peak_rss_mib": 222.234375,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.917,
+          "peak_rss_mib": 222.5703125,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 3.985,
+          "peak_rss_mib": 222.59375,
+          "expected_checksum": 3655420808
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 6.611,
+          "peak_rss_mib": 227.8359375,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 6.59,
+          "peak_rss_mib": 227.8359375,
+          "expected_checksum": 3655420808
+        },
+        {
+          "seconds": 6.623,
+          "peak_rss_mib": 227.8359375,
+          "expected_checksum": 3655420808
+        }
+      ]
+    },
+    "Etc::Sieve": {
+      "Jihoo": [
+        {
+          "seconds": 1.425853369,
+          "peak_rss_mib": 4.74609375,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.418397849,
+          "peak_rss_mib": 4.74609375,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.437355043,
+          "peak_rss_mib": 4.74609375,
+          "expected_checksum": 1042248060
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 1.562,
+          "peak_rss_mib": 5.38671875,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.562,
+          "peak_rss_mib": 5.38671875,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.571,
+          "peak_rss_mib": 5.38671875,
+          "expected_checksum": 1042248060
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 1.387,
+          "peak_rss_mib": 6.8046875,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.393,
+          "peak_rss_mib": 6.8046875,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 1.4,
+          "peak_rss_mib": 6.8046875,
+          "expected_checksum": 1042248060
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 2.194,
+          "peak_rss_mib": 134.71484375,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 2.202,
+          "peak_rss_mib": 134.734375,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 2.19,
+          "peak_rss_mib": 134.7421875,
+          "expected_checksum": 1042248060
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 8.143,
+          "peak_rss_mib": 196.390625,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 8.193,
+          "peak_rss_mib": 196.390625,
+          "expected_checksum": 1042248060
+        },
+        {
+          "seconds": 8.156,
+          "peak_rss_mib": 196.390625,
+          "expected_checksum": 1042248060
+        }
+      ]
+    },
+    "Sort::Quick": {
+      "Jihoo": [
+        {
+          "seconds": 1.129756972,
+          "peak_rss_mib": 4.8828125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.124597322,
+          "peak_rss_mib": 4.8828125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.105964643,
+          "peak_rss_mib": 4.8828125,
+          "expected_checksum": 61757772
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 1.037,
+          "peak_rss_mib": 5.3203125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.015,
+          "peak_rss_mib": 5.3203125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.022,
+          "peak_rss_mib": 5.3203125,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 1.113,
+          "peak_rss_mib": 6.84765625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.084,
+          "peak_rss_mib": 6.84765625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.103,
+          "peak_rss_mib": 6.84765625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 1.817,
+          "peak_rss_mib": 83.23828125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.795,
+          "peak_rss_mib": 83.21875,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.8,
+          "peak_rss_mib": 83.171875,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 2.589,
+          "peak_rss_mib": 221.01953125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 2.524,
+          "peak_rss_mib": 221.01953125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 2.527,
+          "peak_rss_mib": 221.01953125,
+          "expected_checksum": 61757772
+        }
+      ]
+    },
+    "Sort::Merge": {
+      "Jihoo": [
+        {
+          "seconds": 1.697205086,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.7014377,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.715113724,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.953,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.961,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.959,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 1.294,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.288,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.294,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 2.542,
+          "peak_rss_mib": 137.2109375,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 2.545,
+          "peak_rss_mib": 137.3203125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 2.543,
+          "peak_rss_mib": 141.28125,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 3.598,
+          "peak_rss_mib": 221.97265625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 3.612,
+          "peak_rss_mib": 221.97265625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 3.63,
+          "peak_rss_mib": 221.97265625,
+          "expected_checksum": 61757772
+        }
+      ]
+    },
+    "Sort::Self": {
+      "Jihoo": [
+        {
+          "seconds": 0.787707247,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.790256554,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.782253145,
+          "peak_rss_mib": 6.2890625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 1.656,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.647,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.642,
+          "peak_rss_mib": 6.8515625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.294,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.289,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 0.291,
+          "peak_rss_mib": 8.31640625,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 3.625,
+          "peak_rss_mib": 199.46484375,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 3.595,
+          "peak_rss_mib": 199.03125,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 3.616,
+          "peak_rss_mib": 199.125,
+          "expected_checksum": 61757772
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 1.747,
+          "peak_rss_mib": 219.1484375,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.742,
+          "peak_rss_mib": 219.1484375,
+          "expected_checksum": 61757772
+        },
+        {
+          "seconds": 1.736,
+          "peak_rss_mib": 219.1484375,
+          "expected_checksum": 61757772
+        }
+      ]
+    },
+    "Hash::SHA256": {
+      "Jihoo": [
+        {
+          "seconds": 0.8537682,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.857478974,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.859176898,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 346753887
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.671,
+          "peak_rss_mib": 3.34375,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.677,
+          "peak_rss_mib": 3.34375,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.672,
+          "peak_rss_mib": 3.34375,
+          "expected_checksum": 346753887
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.701,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.703,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 0.708,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 346753887
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 3.467,
+          "peak_rss_mib": 64.7890625,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 3.539,
+          "peak_rss_mib": 64.70703125,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 3.532,
+          "peak_rss_mib": 64.7265625,
+          "expected_checksum": 346753887
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 2.928,
+          "peak_rss_mib": 146.51953125,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 2.92,
+          "peak_rss_mib": 146.51953125,
+          "expected_checksum": 346753887
+        },
+        {
+          "seconds": 2.936,
+          "peak_rss_mib": 146.51953125,
+          "expected_checksum": 346753887
+        }
+      ]
+    },
+    "Hash::CRC32": {
+      "Jihoo": [
+        {
+          "seconds": 0.821895751,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.825450161,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.826131684,
+          "peak_rss_mib": 2.8515625,
+          "expected_checksum": 2412799940
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.814,
+          "peak_rss_mib": 3.5,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.818,
+          "peak_rss_mib": 3.5,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.815,
+          "peak_rss_mib": 3.5,
+          "expected_checksum": 2412799940
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.822,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.833,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 0.827,
+          "peak_rss_mib": 4.81640625,
+          "expected_checksum": 2412799940
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 2.917,
+          "peak_rss_mib": 62.59375,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 2.883,
+          "peak_rss_mib": 62.59375,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 2.97,
+          "peak_rss_mib": 62.59375,
+          "expected_checksum": 2412799940
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 7.291,
+          "peak_rss_mib": 146.67578125,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 7.28,
+          "peak_rss_mib": 146.67578125,
+          "expected_checksum": 2412799940
+        },
+        {
+          "seconds": 7.878,
+          "peak_rss_mib": 146.67578125,
+          "expected_checksum": 2412799940
+        }
+      ]
+    },
+    "CLBG::Fannkuchredux": {
+      "Jihoo": [
+        {
+          "seconds": 0.893966423,
+          "peak_rss_mib": 1.8046875,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.888461846,
+          "peak_rss_mib": 1.8046875,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.893248425,
+          "peak_rss_mib": 1.8046875,
+          "expected_checksum": 135762480
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.991,
+          "peak_rss_mib": 2.4375,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.986,
+          "peak_rss_mib": 2.4375,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.978,
+          "peak_rss_mib": 2.4375,
+          "expected_checksum": 135762480
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.978,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.981,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 0.974,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 135762480
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 1.212,
+          "peak_rss_mib": 64.24609375,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 1.204,
+          "peak_rss_mib": 64.90625,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 1.239,
+          "peak_rss_mib": 64.24609375,
+          "expected_checksum": 135762480
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 2.597,
+          "peak_rss_mib": 144.3515625,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 2.497,
+          "peak_rss_mib": 144.3515625,
+          "expected_checksum": 135762480
+        },
+        {
+          "seconds": 2.605,
+          "peak_rss_mib": 144.3515625,
+          "expected_checksum": 135762480
+        }
+      ]
+    },
+    "CLBG::Mandelbrot": {
+      "Jihoo": [
+        {
+          "seconds": 0.756195021,
+          "peak_rss_mib": 4.1015625,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.759212192,
+          "peak_rss_mib": 4.1015625,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.763363354,
+          "peak_rss_mib": 4.1015625,
+          "expected_checksum": 3455988829
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.761,
+          "peak_rss_mib": 4.59375,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.745,
+          "peak_rss_mib": 4.59375,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.741,
+          "peak_rss_mib": 4.59375,
+          "expected_checksum": 3455988829
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.805,
+          "peak_rss_mib": 6.06640625,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.792,
+          "peak_rss_mib": 6.06640625,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.789,
+          "peak_rss_mib": 6.06640625,
+          "expected_checksum": 3455988829
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 0.816,
+          "peak_rss_mib": 169.5390625,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.805,
+          "peak_rss_mib": 169.953125,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 0.816,
+          "peak_rss_mib": 169.91015625,
+          "expected_checksum": 3455988829
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 1.135,
+          "peak_rss_mib": 212.3828125,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 1.141,
+          "peak_rss_mib": 212.3828125,
+          "expected_checksum": 3455988829
+        },
+        {
+          "seconds": 1.142,
+          "peak_rss_mib": 212.3828125,
+          "expected_checksum": 3455988829
+        }
+      ]
+    },
+    "CLBG::Spectralnorm": {
+      "Jihoo": [
+        {
+          "seconds": 0.789803228,
+          "peak_rss_mib": 2.15625,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.795304543,
+          "peak_rss_mib": 2.15625,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.783409582,
+          "peak_rss_mib": 2.15625,
+          "expected_checksum": 1052198219
+        }
+      ],
+      "C/Clang": [
+        {
+          "seconds": 0.75,
+          "peak_rss_mib": 2.59375,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.752,
+          "peak_rss_mib": 2.59375,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.757,
+          "peak_rss_mib": 2.59375,
+          "expected_checksum": 1052198219
+        }
+      ],
+      "Rust": [
+        {
+          "seconds": 0.754,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.751,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 0.763,
+          "peak_rss_mib": 3.89453125,
+          "expected_checksum": 1052198219
+        }
+      ],
+      "Javascript/Node": [
+        {
+          "seconds": 1.074,
+          "peak_rss_mib": 66.40625,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 1.069,
+          "peak_rss_mib": 66.5625,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 1.072,
+          "peak_rss_mib": 66.71875,
+          "expected_checksum": 1052198219
+        }
+      ],
+      "Python/PyPy": [
+        {
+          "seconds": 1.134,
+          "peak_rss_mib": 143.7734375,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 1.131,
+          "peak_rss_mib": 143.7734375,
+          "expected_checksum": 1052198219
+        },
+        {
+          "seconds": 1.134,
+          "peak_rss_mib": 143.7734375,
+          "expected_checksum": 1052198219
+        }
+      ]
+    }
+  },
+  "failures": [],
+  "repeats": 3,
+  "languages": [
+    "Jihoo",
+    "C/Clang",
+    "Rust",
+    "Javascript/Node",
+    "Python/PyPy"
+  ],
+  "medians": {
+    "Binarytrees::Obj": {
+      "Jihoo": 1.388422922,
+      "C/Clang": 1.865,
+      "Rust": 1.917,
+      "Javascript/Node": 3.94,
+      "Python/PyPy": 6.41
+    },
+    "Binarytrees::Arena": {
+      "Jihoo": 0.363740664,
+      "C/Clang": 0.338,
+      "Rust": 0.33,
+      "Javascript/Node": 5.157,
+      "Python/PyPy": 9.109
+    },
+    "Matmul::Single": {
+      "Jihoo": 4.283769819,
+      "C/Clang": 3.031,
+      "Rust": 3.309,
+      "Javascript/Node": 3.985,
+      "Python/PyPy": 6.611
+    },
+    "Etc::Sieve": {
+      "Jihoo": 1.425853369,
+      "C/Clang": 1.562,
+      "Rust": 1.393,
+      "Javascript/Node": 2.194,
+      "Python/PyPy": 8.156
+    },
+    "Sort::Quick": {
+      "Jihoo": 1.124597322,
+      "C/Clang": 1.022,
+      "Rust": 1.103,
+      "Javascript/Node": 1.8,
+      "Python/PyPy": 2.527
+    },
+    "Sort::Merge": {
+      "Jihoo": 1.7014377,
+      "C/Clang": 0.959,
+      "Rust": 1.294,
+      "Javascript/Node": 2.543,
+      "Python/PyPy": 3.612
+    },
+    "Sort::Self": {
+      "Jihoo": 0.787707247,
+      "C/Clang": 1.647,
+      "Rust": 0.291,
+      "Javascript/Node": 3.616,
+      "Python/PyPy": 1.742
+    },
+    "Hash::SHA256": {
+      "Jihoo": 0.857478974,
+      "C/Clang": 0.672,
+      "Rust": 0.703,
+      "Javascript/Node": 3.532,
+      "Python/PyPy": 2.928
+    },
+    "Hash::CRC32": {
+      "Jihoo": 0.825450161,
+      "C/Clang": 0.815,
+      "Rust": 0.827,
+      "Javascript/Node": 2.917,
+      "Python/PyPy": 7.291
+    },
+    "CLBG::Fannkuchredux": {
+      "Jihoo": 0.893248425,
+      "C/Clang": 0.986,
+      "Rust": 0.978,
+      "Javascript/Node": 1.212,
+      "Python/PyPy": 2.597
+    },
+    "CLBG::Mandelbrot": {
+      "Jihoo": 0.759212192,
+      "C/Clang": 0.745,
+      "Rust": 0.792,
+      "Javascript/Node": 0.816,
+      "Python/PyPy": 1.141
+    },
+    "CLBG::Spectralnorm": {
+      "Jihoo": 0.789803228,
+      "C/Clang": 0.752,
+      "Rust": 0.754,
+      "Javascript/Node": 1.072,
+      "Python/PyPy": 1.134
+    }
+  },
+  "ranking_by_total_seconds": [
+    [
+      "Rust",
+      13.691
+    ],
+    [
+      "C/Clang",
+      14.394
+    ],
+    [
+      "Jihoo",
+      15.200722022999999
+    ],
+    [
+      "Javascript/Node",
+      32.784
+    ],
+    [
+      "Python/PyPy",
+      53.258
+    ]
+  ],
+  "per_case_jihoo_rank": {
+    "Binarytrees::Obj": 1,
+    "Binarytrees::Arena": 3,
+    "Matmul::Single": 4,
+    "Etc::Sieve": 2,
+    "Sort::Quick": 3,
+    "Sort::Merge": 3,
+    "Sort::Self": 2,
+    "Hash::SHA256": 3,
+    "Hash::CRC32": 2,
+    "CLBG::Fannkuchredux": 1,
+    "CLBG::Mandelbrot": 2,
+    "CLBG::Spectralnorm": 3
+  },
+  "geometric_mean_over_c": {
+    "Jihoo": 1.015967487207886,
+    "C/Clang": 1.0,
+    "Rust": 0.899925624353838,
+    "Javascript/Node": 2.3010650539974873,
+    "Python/PyPy": 3.409049406516847
+  }
+}
